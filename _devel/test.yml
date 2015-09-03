@@ -1,6 +1,13 @@
 ---
 - hosts: '{{ hosts }}'
   sudo: yes
+
+  pre_tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+
   roles:
-    - ansible_template_role
+    - ansible_php
 

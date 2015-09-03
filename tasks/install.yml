@@ -1,0 +1,8 @@
+---
+
+- name: Install php packages
+  apt:
+    state: present
+    name: "{{ item }}"
+    install_recommends: no
+  with_items: php_packages
