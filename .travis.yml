@@ -2,4 +2,8 @@
 language: bash
 dist: trusty
 sudo: required
+branches:
+  only:
+    - master
+
 script: cd _devel; make travis_ci;
