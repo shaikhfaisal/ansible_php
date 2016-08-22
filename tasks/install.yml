@@ -5,4 +5,4 @@
     state: present
     name: "{{ item }}"
     install_recommends: no
-  with_items: php_packages
+  with_items: "{{php_packages}}"
