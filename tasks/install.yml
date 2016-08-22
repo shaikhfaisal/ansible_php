@@ -1,8 +1,14 @@
 ---
 
+- name: Install php7 ppa
+  apt_repository: 
+    repo: "ppa:ondrej/php"
+    update_cache: yes
+
+
 - name: Install php packages
   apt:
     state: present
     name: "{{ item }}"
     install_recommends: no
-  with_items: php_packages
+  with_items: "{{php_packages}}"
