@@ -25,5 +25,5 @@ travis_ci:
 	ansible --version
 	mkdir -p tmp_roles
 	ln -s ../ ansible_php
-	ansible-playbook -c local -e "hosts=127.0.0.1" test.yml
-	#rm -f ansible_php
+	ansible-playbook -c local -e "hosts=localhost" test.yml
+	rm -f ansible_php
